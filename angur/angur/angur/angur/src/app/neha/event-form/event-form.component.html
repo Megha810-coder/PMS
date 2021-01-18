@@ -1,0 +1,119 @@
+<div class="animated fadeIn">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <strong>Event Details</strong>
+          </div>
+          <div class="card-body">
+            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Event Name *</label>
+                <div class="col-md-6">
+                  <input type="text" id="event_name" name="event_name" class="form-control" placeholder="Plz Enter event name">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select1">Location *</label>
+                <div class="col-md-3">
+                  <select id="location" name="location" class="form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Head Office</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Host *</label>
+                <div class="col-md-3">
+                  <input type="text" id="host_name" name="host_name" class="form-control" placeholder="Plz Enter event name">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select1">Visitor Type</label>
+                <div class="col-md-3">
+                  <select id="visitors_name" name="visitors_name" class="form-control">
+                    <option value="Please select">Please select</option>
+                    <option value="Visitor">Visitor</option>
+                    <option value="Contractor">Contractor</option>
+                    <option value="Delivery">Delivery</option>
+                  </select>
+                </div>
+              </div>
+              <!-- <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="date-input">Start Date* </label>
+                <div class="col-md-3">
+                  <input class="form-control" id="start_date" type="date" name="start_date" placeholder="date">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="date-input">End Date* </label>
+                <div class="col-md-3">
+                  <input class="form-control" id="end_date" type="date" name="end_date" placeholder="date">
+                </div>
+              </div> -->
+
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="date">Start Date</label>
+                </div>
+                <div class="col-md-3">
+                  <input type="date"  id="bday" name="bday" placeholder="leave date..">
+                </div>
+               <div class="col-md-3">
+                  <label for="date">Start Time</label>
+                </div>
+                <div class="col-md-3">
+                  <input type="time" name="usr_time"><br><br>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="date">End Date</label>
+                </div>
+                <div class="col-md-3">
+                  <input type="date"  id="bday" name="bday" placeholder="leave date..">
+                </div>
+               <div class="col-md-3">
+                  <label for="date">End Time</label>
+                </div>
+                <div class="col-md-3">
+                  <input type="time" name="usr_time"><br>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-9 col-form-label">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="option1" id="checkbox1">
+                    <label class="form-check-label" for="checkbox1"> All Day Event
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="option1" id="checkbox2">
+                    <label class="form-check-label" for="checkbox2">Send 'Summary Report' to host when event has concluded<br>
+                    </label>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-4 col-form-label" for="textarea-input">Text</label>
+                    <div class="col-md-6">
+                      <textarea id="textarea" name="textarea" rows="4" class="form-control" placeholder="Content.."></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer">
+            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Save Event</button>
+            <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset Event</button>
+            <button type="back" class="btn btn-sm btn-success"><i class="fa fa-backward"></i> &nbsp; Back</button>
+          </div>
+        </div>
+        
+      </div>
+      <!--/.col-->
+    </div><!--/.row-->
+    </div>
+
+

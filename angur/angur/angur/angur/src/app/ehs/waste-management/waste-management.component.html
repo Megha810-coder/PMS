@@ -1,0 +1,145 @@
+
+<!--/.col-->
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+
+<div class="col-lg-12">
+  <div class="card">
+      <div class="w3-bar"> 
+          <div class="input-group">
+              <div class="row align-items-center">
+                
+                <!-- <div class="btn-group" dropdown>
+                  <button dropdownToggle type="button" class="btn btn-pill btn btn-primary dropdown-toggle">
+                    New <span class="caret"></span>
+                  </button>
+                  <ul *dropdownMenu class="dropdown-menu" role="menu">
+                    <a class="dropdown-item" [routerLink] = "'/ehs/Waste-Form'"><li role="menuitem">Create</li></a>
+                    <a class="dropdown-item" [routerLink] = "'/neha/Invite'"><li role="menuitem">Invite Visitors</li></a>
+                  </ul>
+                </div>    -->
+                <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    <a [routerLink] = "'/ehs/Waste-Form'"> <button type="button" class="btn btn-pill btn-block btn-primary">Create</button></a>
+                  </div>
+                  <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    <a [routerLink] = "'/neha/Email'"> <button type="button" class="btn btn-pill btn-block btn-primary">Email</button></a>
+                  </div>
+
+
+                  <div id="fetchbtn">
+                    <button type="button" class="btn btn-pill btn-block btn-primary" (click)="getAllWasteList();">Click me</button>
+                  </div><hr>
+
+                  <!-- <div><small class="text-info">Click the button to fetch the labour check  from the database!</small></div> -->
+                  <!-- {{myresponse}} -->
+                  <div class="form-group">
+                      <div class="controls">
+                        <div class="input-group">
+                          <input id="appendedInputButtons" size="18" class="form-control" type="text" placeholder="Search..">
+                          <span class="input-group-append">
+                            <button class="btn btn-secondary" type="button"><i class="fa fa-search"></i></button>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+    <div class="card-header">
+        <i class="fa fa-align-justify"></i><b><i>Waste Report</i></b>
+    </div>
+    <div class="card-body">
+      <!-- <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Material Name	</th>
+            <th>	Quantity</th>
+            <th>Date</th>
+            <th>Department</th>
+            <th>Methods</th>
+            <th>Disposal Name</th>
+          </tr>
+          <tbody>
+              <tr>
+                <td>Yiorgos Avraamu</td>
+                <td>Member</td>
+                <td>2012/01/01</td>
+                <td>Member</td>
+                <td>Member</td>
+                <td>Member</td>
+              </tr>
+              <tr>
+                <td>Avram Tarasios</td>
+                <td>Member</td>
+                <td>2012/02/01</td>
+                <td>Staff</td>
+                <td>Member</td>
+                <td>Member</td>
+
+              </tr>
+              <tr>
+                <td>Quintin Ed</td>
+                <td>Member</td>
+                <td>2012/02/01</td>
+                <td>Admin</td>
+                <td>Member</td>
+                <td>Member</td>
+              </tr>
+              <tr>
+                <td>Enéas Kwadwo</td>
+                <td>Member</td>
+                <td>2012/03/01</td>
+                <td>Member</td>
+                <td>Member</td>
+                <td>Member</td>
+              </tr>
+              <tr>
+                <td>Agapetus Tadeáš</td>
+                <td>Member</td>
+                <td>2012/01/21</td>
+                <td>Staff</td>
+                <td>Member</td>
+                <td>Member</td>
+              </tr>
+            </tbody>     
+           </table> -->
+
+           <table class="table table-bordered table-striped table-sm">
+            <thead>
+              <th>Waste ID</th>
+              <th>Material Name</th>
+              <th>Quantity</th>
+              <th>Disposal Date</th>
+              <th>Department</th>
+              <th>Methods</th>
+              
+            </thead>
+            <tbody>
+              <tr *ngFor="let waste of myresponse">
+                  <td>{{waste.waste_id }}</td>
+                <td>{{waste.chem_name }}</td>
+                <td>{{waste.quantity}}</td>
+                <td>{{waste.disposal_date  }}</td>
+                <td>{{waste.waste_department}}</td>
+                <td>{{waste.techniques}}</td>
+                
+              </tr>
+            </tbody>  
+          </table>
+    
+
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+        <li class="page-item active">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--/.col-->

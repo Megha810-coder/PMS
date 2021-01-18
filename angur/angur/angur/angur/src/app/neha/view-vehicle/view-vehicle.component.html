@@ -1,0 +1,133 @@
+<head>
+  <style>
+    .card-header {
+      background-color: #BFC9CA;
+
+    }
+  </style>
+</head>
+<div class="animated fadeIn">
+    <div class="row">
+        <div class>
+                         
+            <a [routerLink] = "'/neha/Vehicle'"> <button type="button" class="btn btn-pill btn-block btn-primary">Back</button> </a>
+        </div>
+        <div class="col-md-12 mb-8">
+          
+            <form (ngSubmit) = "onClickSubmit()">
+  
+          
+  
+             
+                
+                <div class="card-body">
+                    <legend>A)Vehicle Details:-</legend>
+								<div class="form-group row">
+									<div class="col-sm-12">
+										<div class="row">
+											<div class="col-sm-6">
+                        <label for="name-2" class="block"><font size="3" ><b>1.Name:-</b></font> </label> 
+                        <!-- <input id="vehicle_name" name="vehicle_name" type="text" class="form-control" [(ngModel)]="pro.vehicle_name"> -->
+                        {{pro.vehicle_name}}
+											</div>
+											<div class="col-sm-6">
+                        <label for="text-2" class="block"><font size="3" ><b>2.No:- </b></font></label>
+                         <!-- <input
+        id="vehicle_no" name="vehicle_no" type="text" class="form-control" [(ngModel)]="pro.vehicle_no">  -->
+                          {{pro.vehicle_no}}
+											</div>
+										</div>
+									</div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="text-2" class="block"><font size="3" ><b>3.Type Of Vehicle:- </b></font></label> 
+                  <!-- <input
+                    id="vehicle_no" name="vehicle_no" type="text" class="form-control" [(ngModel)]="pro.supplier_name"> -->
+                    {{pro.supplier_name}}
+                </div>
+              
+                         
+                        <br><br>
+
+                      <legend>B)Supplier Details:-</legend>
+                      <div class="form-group row">
+                          <div class="col-sm-12">
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <label for="name-2" class="block"><font size="3" ><b>1.Name:-</b></font> </label>
+                                 <!-- <input
+                                  id="supplier_name" name="supplier_name" type="text"
+                                  class="form-control" [(ngModel)]="pro.supplier_name"> -->
+                                  {{pro.supplier_name}}
+                              </div>
+                              <div class="col-sm-6">
+                                <label for="text-2" class="block"><font size="3" ><b>2.Phone No:- </b></font></label> 
+                                <!-- <input
+                                  id="supplier_no" name="supplier_no" type="text" class="form-control" [(ngModel)]="pro.supplier_no"> -->
+                                  {{pro.supplier_no}}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                              <label for="address-2" class="block"><font size="3" ><b>3.Address:-</b></font></label>
+                            </div>
+                            <div class="col-sm-12">
+                              <!-- <input id="supplier_address" name="supplier_address" type="text"
+                                class="form-control" [(ngModel)]="pro.supplier_address"> -->
+                                {{pro.supplier_address}}
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                              <label class="col-md-2 col-form-label" for="date-input"><font size="3"><b>4.Delivery Date</b></font> </label>
+                              <div class="col-md-3">
+                                <!-- <input class="form-control" id="delivery_Date" type="date" name="delivery_Date" placeholder="date" [(ngModel)]="pro.Delivery_Date"> -->
+                                {{pro.Delivery_Date}}
+                              </div>
+                            </div>
+                          <!-- <div class="form-group row">
+                            <div class="col-sm-6">
+                                <label for="text-2" class="block"><font size="3"><b>4.Delivery Date</b></font></label>
+                                <div class="col-md-3">
+                                  <input class="form-control" id="delivery_Date" type="date" name="delivery_Date" placeholder="date" ngModel>
+                                </div>
+                              </div>
+                          </div> -->
+                          <br><br>
+                          <legend>C)Vehicle Driver Details:-</legend>
+								<div class="form-group row">
+									<div class="col-sm-12">
+										<div class="row">
+											<div class="col-sm-6">
+                        <label for="name-2" class="block"><font size="3" ><b>1.Name:-</b></font> </label> 
+                        <!-- <input
+													id="driver_name" name="driver_name" type="text"
+                          class="form-control" [(ngModel)]="pro.driver_name"> -->
+                          {{pro.driver_name}}
+											</div>
+											<div class="col-sm-6">
+                        <label for="text-2" class="block"><font size="3" ><b>2.Phone No:-</b> </font></label>
+                         <!-- <input
+                          id="driver_no" name="driver_no" type="text" class="form-control" [(ngModel)]="pro.driver_no"> -->
+                          {{pro.driver_no}}
+											</div>
+										</div>
+									</div>
+								</div>
+                  </div>
+              
+  
+             
+  
+              
+            
+            
+            <input type="submit" value="submit">
+          </form>
+        
+         </div>
+         
+    </div>
+   
+    </div>

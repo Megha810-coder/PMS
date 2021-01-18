@@ -1,0 +1,240 @@
+
+
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+          <div class="card-footer">
+              <a [routerLink] = "'/ehs/Waste Management'"> <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Back </button></a>
+          </div>
+        <div class="card-header">
+          <strong>Waste Material Management</strong>
+        </div>
+        <div class="card-body">
+          <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+            <h3>A.Waste Material Management:</h3>
+            <hr>
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="text-input"><font size="4" >1.Material Name </font></label>
+              <div class="col-md-6">
+                <input type="text" id="event_name" name="event_name" class="form-control" placeholder="Plz enter Material name">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="text-input"><font size="4" >2.Quantity</font> </label>
+              <div class="col-md-6">
+                <input type="text" id="event_name" name="event_name" class="form-control" placeholder="Plz enter quantity">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="text-input"><font size="4" >3.Description</font></label>
+              <div class="col-md-6">
+                  <textarea id="textarea" name="textarea" rows="4" class="form-control" placeholder="Write something here..."></textarea>
+                </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="select1"><font size="4" >4.Department</font> </label>
+              <div class="col-md-3">
+                <select id="location" name="location" class="form-control">
+                  <option value="0">Please select</option>
+                  <option value="Production">Production </option>
+                  <option value="Reserach and Development">Reserach and Development</option>
+                  <option value="Accounting and Finance">Accounting and Finance</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3">
+                <label for="date"><font size="4" >5. Date of Disposal</font></label>
+              </div>
+              <div class="col-md-6">
+                <input type="date"  id="bday" name="bday" placeholder="leave date.."><br>
+              </div>
+            </div>
+            
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="select1"><font size="4" >6.Disposal Method </font></label>
+              <div class="col-md-3">
+                <select id="location" name="location" class="form-control">
+                  <option value="0">Please select</option>
+                  <option value="Landfill">Landfill </option>
+                  <option value="Incineration">Incineration</option>
+                  <option value="Deep well Injection">Deep well Injection</option>
+                  <option value="Recycle">Recycle</option>
+                  <option value="Filters">Filters</option>
+                  <option value="Scrubbers">Scrubbers</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-12">
+                <div class="row">
+               <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="row">
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <label for="emp_gender" class="block"><font size="4" >-Generation:</font></label>
+                            </div>
+                            <div class="form-group form-radio col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                                <div class="radio radio-inline">
+                                    <label>
+                                        <input type="radio" class="form_control" name="ehs_Shipping.generation" id="generation_1" value="1">
+                                        <i class="helper"></i>Yes &nbsp;&nbsp;&nbsp;&nbsp;
+                                    </label>
+                                    <label>
+                                        <input type="radio" class="form_control" name="ehs_Shipping.generation" id="generation_2" value="2">
+                                        <i class="helper"></i>No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-12">
+        <div class="row">
+       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="row">
+                    <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                        <label for="emp_gender" class="block"><font size="4" >-Collection:</font></label>
+                    </div>
+                    <div class="form-group form-radio col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                        <div class="radio radio-inline">
+                            <label>
+                                <input type="radio" class="form_control" name="ehs_Shipping.collection" id="collection_1" value="1">
+                                <i class="helper"></i>Yes &nbsp;&nbsp;&nbsp;&nbsp;
+                            </label>
+                            <label>
+                                <input type="radio" class="form_control" name="ehs_Shipping.collection" id="collection_2" value="2">
+                                <i class="helper"></i>No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+</div>
+<div class="form-group row">
+    <div class="col-sm-12">
+    <div class="row">
+   <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <label for="emp_gender" class="block"><font size="4" >-Storage:</font></label>
+                </div>
+                <div class="form-group form-radio col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                    <div class="radio radio-inline">
+                        <label>
+                            <input type="radio" class="form_control" name="ehs_Shipping.storage" id="storage_1" value="1">
+                            <i class="helper"></i>Yes &nbsp;&nbsp;&nbsp;&nbsp;
+                        </label>
+                        <label>
+                            <input type="radio" class="form_control" name="ehs_Shipping.storage" id="storage_2" value="2">
+                            <i class="helper"></i>No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+</div>
+<div class="form-group row">
+    <div class="col-sm-12">
+    <div class="row">
+   <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <label for="emp_gender" class="block"><font size="4" >-Transportation:</font></label>
+                </div>
+                <div class="form-group form-radio col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                    <div class="radio radio-inline">
+                        <label>
+                            <input type="radio" class="form_control" name="ehs_Shipping.transportation" id="transportation_1" value="1">
+                            <i class="helper"></i>Yes &nbsp;&nbsp;&nbsp;&nbsp;
+                        </label>
+                        <label>
+                            <input type="radio" class="form_control" name="ehs_Shipping.transportation" id="transportation_2" value="2">
+                            <i class="helper"></i>No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+</div>
+
+ <h3>B.Transportation:</h3>
+ <hr>
+      <div class="form-group row">
+          <label class="col-md-3 col-form-label" for="text-input"><font size="4" >1.Vehicle Name</font> </label>
+          <div class="col-md-6">
+            <input type="text" id="event_name" name="event_name" class="form-control" placeholder="Plz enter vehicle name">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label" for="text-input"><font size="4" >2.Vehicle Number</font> </label>
+          <div class="col-md-6">
+            <input type="text" id="event_name" name="event_name" class="form-control" placeholder="Plz enter vehicle number">
+          </div>
+        </div>
+        
+        <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="text-input"><font size="4" >3.Material Quantity</font></label>
+            <div class="col-md-6">
+              <input type="text" id="event_name" name="event_name" class="form-control" placeholder="Plz enter material quantity">
+            </div>
+          </div>
+
+          <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="text-input"><font size="4" >4.Disposal Name</font></label>
+              <div class="col-md-6">
+                <input type="text" id="event_name" name="event_name" class="form-control" placeholder="Plz enter disposal name">
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                  <label for="date"><font size="4" >5.Date of Dispatch</font></label>
+                </div>
+                <div class="col-md-3">
+                  <input type="date"  id="bday" name="bday" placeholder="leave date.."><br>
+                </div>
+              </div>
+
+    <h3>Documents:</h3>
+    <hr>
+        <div class="row">
+            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+            <label for="emp_doc" class="block"><font size="4" >Document Name:</font></label>
+            </div>
+            <div class="  col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+                <input type="file" class="form-control" onchange="document.getElementById('emp_doc2').src = window.URL.createObjectURL(this.files[0])" id="emp_doc2" name="document.emp_doc2">
+            </div>	
+        </div>
+
+          </form>
+
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Save</button>
+          <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset </button>
+          <button type="back" class="btn btn-sm btn-success"><i class="fa fa-backward"></i> &nbsp; Back</button>
+        </div>
+      </div>
+      
+    </div>
+    <!--/.col-->
+  </div><!--/.row-->
+  </div>
+
+

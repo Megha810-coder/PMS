@@ -1,0 +1,230 @@
+
+
+
+<div class="col-lg-12">
+  <div class="card">
+      <div class="w3-bar"> 
+          <div class="input-group">
+              <div class="row align-items-center">
+                
+                <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                  <button type="button" class="btn btn-pill btn-block btn-primary" (click)="save();">Create</button>
+                </div> 
+                  <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    <a [routerLink] = "'/neha/Email'"> <button type="button" class="btn btn-pill btn-block btn-primary">Email</button></a>
+                  </div>
+                  <!-- <div id="fetchbtn">
+                    <button type="button" class="btn btn-outline-success" (click)="getAllProduct();">Show List</button>
+                  </div> -->
+                  <div class="form-group" >
+                              
+                      <div class="controls" >
+                          <div class="input-group" >
+
+                          <input id="appendedInputButtons" size="16" class="form-control" type="text" name= "search" [(ngModel)]="searchText">
+                          <span class="input-group-append">
+                          
+                            <button class="btn btn-secondary" type="button" >Search</button>
+                           
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+    <div class="card-header">
+        <i class="fa fa-align-justify"></i>Scrap/Waste
+    </div>
+    <div class="card-body">
+     <table class="table table-striped">
+        <thead>
+          <tr>
+            <td>Scrap Id</td>
+            <th>Name Of UnUsed Material</th>
+          
+            <th>Quantity</th>
+            <th>Stock</th>
+            <th>Reused Date</th>
+         
+          </tr>
+          <tbody>
+            <tr *ngFor="let scrap of myresponse | filter:searchText">
+                <td>{{scrap.scrap_id}}</td>
+              <td>{{scrap.unused_material}}</td>
+              <td>{{scrap.quatity}}</td>
+              <td>{{scrap.stock}}  </td>
+              <td>{{scrap.reused_date}}  </td>
+              <td><button type="button" class="btn btn-info mr-1" (click)="updateScrap(scrap);">UPDATE</button> 
+                <button type="button" class="btn btn-info mr-1" (click)="viewScrap(scrap);">VIEW</button> 
+                <button type="button" class="btn btn-info mr-1" (click)="DeleteScrap(scrap.scrap_id);">DELETE</button></td>
+            </tr>
+          </tbody>  
+           </table>
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+        <li class="page-item active">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </div>
+  </div>
+</div> 
+
+
+ 
+
+
+
+
+
+ <!-- <div class="col-lg-12">
+  <div class="card">
+      <div class="w3-bar"> 
+          <div class="input-group">
+              <div class="row align-items-center">
+                
+                <div class="btn-group" dropdown>
+                  <button dropdownToggle type="button" class="btn btn-pill btn btn-primary dropdown-toggle">
+                    New <span class="caret"></span>
+                  </button>
+                  
+                </div>   
+                  <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    <a [routerLink] = "'/neha/Mail'"> <button type="button" class="btn btn-pill btn-block btn-primary">Email</button></a>
+                  </div>
+                  <div id="fetchbtn">
+                    <button type="button" class="btn btn-outline-success" (click)="getAllProduct();">Click me</button>
+                  </div>
+                  <div class="form-group">
+                      <div class="controls">
+                        <div class="input-group">
+                          <input id="appendedInputButtons" size="18" class="form-control" type="text" placeholder="Search..">
+                          <span class="input-group-append">
+                            <button class="btn btn-secondary" type="button"><i class="fa fa-search"></i></button>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+    <div class="card-header">
+        <i class="fa fa-align-justify"></i>Events
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Sr No</th>
+            <th>PRODUCT NAME</th>
+            
+            <th>PRODUCT Type</th>
+            <th>MANUFACTURING ORDER</th>
+           
+            <th>MANUFACTURING DATE</th>
+          </tr>
+          <tbody>
+            <tr *ngFor="let product of myresponse">
+              <td>{{product.pro_id}}</td>
+              <td>{{product.product_name}}</td>
+              <td>{{product.manufa_order}}  </td>
+              <td>{{product.manufacturing_date}}</td>
+            
+              
+              
+              
+             
+            </tr>
+          </tbody>  
+           </table>
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+        <li class="page-item active">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+
+
+
+<!-- <div class="animated fadeIn">
+<div class="row">
+    <div class="col-md-12 mb-8">
+    
+        <form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)">
+
+        <tabset>
+
+          <tab>
+            <ng-template tabHeading><i class="icon-list"></i> Product Packeging &nbsp;</ng-template>
+            <div class="card-body">
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="text-input"><b>Packeging Type</b> </label>
+                    <div class="col-md-6">
+                      <input type="text" id="product_name" name="product_name" class="form-control" placeholder="Plz Enter" ngModel>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                      <label class="col-md-3 col-form-label" for="text-input"><b>Packeging Method </b></label>
+                      <div class="col-md-6">
+                        <input type="text" id="product_quantity" name="product_quantity" class="form-control" placeholder="Plz Enter Quantity" ngModel>
+                      </div>
+                    </div>
+
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label for="date"> <b>Way To Handle</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" id="bill_material" name="bill_material" class="form-control" placeholder="Plz Enter Bill" ngModel>
+                      </div>
+                    </div>
+                   
+                     
+                    <br>
+<div>
+                  <div class="form-group row">
+                      <label class="col-md-3 col-form-label" for="text-input"><b>Packeging Date</b></label>
+                      <ejs-datepicker id='datepicker' placeholder='Select a Date'></ejs-datepicker>
+                      <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                        </div>
+                    </div>
+                  </div>
+                  <div>
+                    <br>
+                    <div class="form-group row">
+                      <label class="col-md-3 col-form-label" for="text-input"><b>Delivery Date</b></label>
+                      <ejs-datepicker id='datepicker' placeholder='Select a Date'></ejs-datepicker>
+                      <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                        </div>
+                    </div>
+                  </div>
+              </div>
+          </tab>
+
+         
+
+          
+        
+        </tabset>
+        <input type="submit" value="submit">
+      </form>
+    
+     </div>
+     
+</div>
+
+</div>
+ -->

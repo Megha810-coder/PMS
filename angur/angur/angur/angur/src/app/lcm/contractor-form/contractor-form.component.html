@@ -1,0 +1,132 @@
+<head>
+  <style>
+    .card-header {
+      background-color: #BFC9CA;
+
+    }
+  </style>
+
+</head>
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+          <div class="card-footer">
+              <a [routerLink] = "'/lcm/Contractor List'"> <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Back </button></a>
+          </div>
+
+        <div class="card-header">
+          <h3>Contractor Details</h3>
+        </div>
+        <div class="card-body">
+          <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+            <div class="form-group row">
+              <label class="col-md-2 col-form-label" for="text-input">Contractor Code:-</label>
+              <div class="col-md-3">
+                <input id="cd_code" name="cd_code" type="text" class=" form-control" value="CON 1" />
+
+              </div>
+              <div class="  col-sm-5 col-md-5 col-lg-5 col-xl-5 ">
+                <input type="file" class="form-control" id="cd_profile_photo" name="cd_profile_photo">
+                <img class="d-block img-fluid img-thumbnail" id="cd_profile_photo_view" style="height: 150px;"
+                   alt="Preview Photo here....">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="row">
+                  <div class="  col-sm-2 col-md-2 col-lg-3 col-xl-2">
+                    <label for="cd_fname" class="block">Full Name:-</label>
+                  </div>
+                  <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                    <select name="cd_title" id="cd_title" class="form-control" required
+                      data-bv-notempty-message="Please select title.">
+                      <option value="">---Select Title---</option>
+                      <option value="Mr.">Mr.</option>
+                      <option value="Mrs.">Mrs.</option>
+                      <option value="Miss.">Miss.</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                    <input id="cd_fname" name="cd_fname" type="text" class=" form-control" placeholder="First Name"
+                      required data-bv-notempty-message="Please enter first name.">
+                  </div>
+                  <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                    <input id="cd_mname" name="cd_mname" type="text" class=" form-control" placeholder="Middle Name"
+                      required data-bv-notempty-message="Please enter middle name.">
+                  </div>
+                  <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                    <input id="cd_lname" name="cd_lname" type="text" class=" form-control" placeholder="Last Name"
+                      required data-bv-notempty-message="Please enter last name.">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="form-group row">
+              <div class="col-sm-3 col-md-3 col-lg-3 col-xl-2">
+                <label for="emp_gender" class="block">Gender:-</label>
+              </div>
+              <div class="form-group form-radio col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                <div class="radio radio-inline">
+                  <label>
+                    <input type="radio" class="form_control" name="cd_gender" id="cd_gender_1" value="1">
+                    <i class="helper"></i>Male
+                  </label>
+                </div>
+                <div class="radio radio-inline">
+                  <label>
+                    <input type="radio" class="form_control" name="cd_gender" id="cd_gender_2" value="2">
+                    <i class="helper"></i>Female
+                  </label>
+                </div>
+                <div class="radio radio-inline">
+                  <label>
+                    <input type="radio" class="form_control" name="cd_gender" id="cd_gender_3" value="3" />
+                    <i class="helper"></i>Transgender
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-2 col-form-label" for="date-input">Date Of Birth:- </label>
+              <div class="col-md-3">
+                <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-2 col-form-label" for="text-input">Mobile No:-</label>
+              <div class="col-md-3">
+                <input id="cd_mobile_no" name="cd_mobile_no" type="text" class=" form-control" required
+                  data-bv-notempty-message="Please enter mobile number.">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-2 col-form-label" for="select1">Marital Status:-</label>
+              <div class="col-md-3">
+                <select id="select1" name="select1" class="form-control">
+                  <option value="Please select">Please select</option>
+                  <option value="1">Single</option>
+                  <option value="2">Married</option>
+                  <option value="3">Divorce</option>
+                </select>
+              </div>
+            </div>
+
+          </form>
+        </div>
+        <div class="card-footer">
+
+            
+           <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Save </button>
+          <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset </button> -->
+        </div>
+      </div>
+
+    </div>
+    <!--/.col-->
+  </div>
+  <!--/.row-->
+</div>

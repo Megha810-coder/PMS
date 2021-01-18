@@ -1,0 +1,86 @@
+
+
+ <div class="col-lg-12">
+  <div class="card">
+      <div class="w3-bar"> 
+          <div class="input-group">
+              <div class="row align-items-center">
+                
+                <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                  <button type="button" class="btn btn-pill btn-block btn-primary" (click)="save();">Create</button>
+                  </div> 
+                  <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    <a [routerLink] = "'/neha/Email'"> <button type="button" class="btn btn-pill btn-block btn-primary">Email</button></a>
+                  </div>
+                 
+                  <div class="form-group" >
+                              
+                      <div class="controls" >
+                          <div class="input-group" >
+
+                          <input id="appendedInputButtons" size="16" class="form-control" type="text" name= "search" [(ngModel)]="searchText">
+                          <span class="input-group-append">
+                          
+                            <button class="btn btn-secondary" type="button" >Search</button>
+                           
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+    <div class="card-header">
+        <i class="fa fa-align-justify"></i>Bill
+    </div>
+    <div class="card-body">
+     <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Bill ID</th>
+          
+            <th>Name Of Purchaser</th>
+            <th>Purchaser No</th>
+            <th>Name Of Supplier</th>
+            <th>Supplier No</th>
+          </tr>
+          <tbody>
+            <tr *ngFor="let bill of myresponse | filter:searchText">
+              <td>{{bill.bill_id}}</td>
+              <td>{{bill.name_purchaser}}</td>
+              <td>{{bill.purchaser_no}}  </td>
+              <td>{{bill.supplier_name}}  </td>
+              <td>{{bill.supplier_no}}  </td>
+              <td><button type="button" class="btn btn-info mr-1" (click)="updateBill(bill);">UPDATE</button> 
+                <button type="button" class="btn btn-info mr-1" (click)="viewBill(bill);">VIEW</button> 
+                <button type="button" class="btn btn-info mr-1" (click)="DeleteBill(bill.bill_id);">DELETE</button></td>
+            </tr>
+          </tbody>  
+           </table>
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+        <li class="page-item active">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </div>
+  </div>
+</div> 
+
+
+ 
+
+
+
+
+
+  
+  -->
+  
+ 
+
+  

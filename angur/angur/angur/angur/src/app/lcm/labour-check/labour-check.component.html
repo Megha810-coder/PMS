@@ -1,0 +1,36 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-danger text-center"></h1>
+
+    <div id="fetchbtn">
+      <button type="button" class="btn btn-outline-success" (click)="getAllLabourCheck();">Click me</button>
+      <a [routerLink] = "'/lcm/Contractor Form'"> <button type="button" class="btn btn-outline-success" (click)="getAllContractors();">Create</button></a>
+    </div><hr>
+    <div><small class="text-info">Click the button to fetch the labour check  from the database!</small></div>
+    <!-- {{myresponse}} -->
+   <div >
+      <table class="table table-bordered table-striped table-sm">
+        <thead>
+          <th>Labour Id</th>
+        
+        </thead>
+        <tbody>
+          <tr *ngFor="let labours of myresponse">
+            <td>{{labours.lab_check_id}}</td>
+           
+            
+          </tr>
+        </tbody>  
+      </table>
+
+    </div> 
+  </div>
+</body>
+
+</html>

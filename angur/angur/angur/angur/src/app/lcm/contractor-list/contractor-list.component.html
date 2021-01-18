@@ -1,0 +1,57 @@
+
+
+
+
+
+
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-danger text-center"></h1>
+
+    <div id="fetchbtn">
+      <button type="button" class="btn btn-outline-success" (click)="getAllContractors();">Click me</button>
+      <a [routerLink] = "'/lcm/Contractor Form'"> <button type="button" class="btn btn-outline-success" (click)="getAllContractors();">Create</button></a>
+    </div><hr>
+    <div><small class="text-info">Click the button to fetch the contractor from the database!</small></div>
+    <!-- {{myresponse}} -->
+   <div >
+      <table class="table table-bordered table-striped table-sm">
+        <thead>
+          <th>Contractor Id</th>
+          <th>Contractor Code</th>
+          <th>Contractor Name</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contractor of myresponse">
+            <td>{{contractor.cd_id}}</td>
+            <td>{{contractor.cd_code}}</td>
+            <td>{{contractor.cd_fname}} {{contractor.cd_mname}} {{contractor.cd_lname}}</td>
+            
+          </tr>
+        </tbody>  
+      </table>
+<!-- 
+      <table border="1" style="width: 33%">
+        <tr>
+      
+          <th>First_Name</th>
+          <th>M_Name</th>
+        </tr>
+        <tr *ngFor="let emp of employees">
+         
+          <td>{{ emp.lab_fname }}</td>
+          <td>{{ emp.lab_mname }}</td>
+        </tr>
+      </table> -->
+    </div> 
+  </div>
+</body>
+
+</html>

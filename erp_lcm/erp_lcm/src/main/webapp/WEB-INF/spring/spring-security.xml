@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xmlns:beans="http://www.springframework.org/schema/beans"
+    xsi:schemaLocation="http://www.springframework.org/schema/security
+      http://www.springframework.org/schema/security/spring-security-4.0.xsd
+      http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+ 
+    <http use-expressions="true">
+        <csrf disabled="true"/>
+          
+        <!-- <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />  -->
+        <!-- <intercept-url pattern="/usr/sv" access="hasRole('ROLE_ADMIN')" /> -->
+         
+        <intercept-url pattern="/" access="permitAll()" />
+        <intercept-url pattern="/logout" access="permitAll()" />
+       	<intercept-url pattern="/user_dashboard" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')" />
+        
+        <intercept-url pattern="/other/**" access="isAuthenticated()" />
+		<access-denied-handler error-page="/usr/403" />
+ 
+        <form-login 
+        	login-page='/login' 
+        	login-processing-url="/check_app_user"
+            default-target-url="/user_dashboard" 
+            always-use-default-target="true"
+            authentication-failure-url="/login?error=true" 
+            username-parameter="user_name"
+            password-parameter="password" />
+        
+        <logout 
+        	logout-url="/logout" 
+        	logout-success-url="/logoutSuccess"
+			delete-cookies="JSESSIONID" 
+			invalidate-session="true"/>
+		
+		<!-- delete-cookies="JSESSIONID" invalidate-session="true" -->
+           
+ 	</http>
+
+	<!-- 	<authentication-manager alias="authenticationManager">
+        		<authentication-provider ref="customAuthenticationProvider" />
+			</authentication-manager>
+			
+			<beans:bean 
+				id="customAuthenticationProvider" 
+				class="com.kd.butterpond.security.CustomAuthenticationProvider"  >
+			</beans:bean> -->
+ 	
+    <authentication-manager erase-credentials="false">
+   		<!--<authentication-provider>
+            	<user-service>
+                	<user name="nik2" password="1234" authorities="ROLE_USER" />
+                	<user name="nik" password="123" authorities="ROLE_USER, ROLE_ADMIN" />
+            	</user-service>
+        	</authentication-provider> -->
+
+		<!--<authentication from database -->
+        	<authentication-provider>
+            	<jdbc-user-service 
+            		data-source-ref="dataSource"
+                	users-by-username-query="select app_email_id,app_password,1 as enabled from erp_app_user where app_email_id=?"
+                	authorities-by-username-query="Select app_email_id, concat('ROLE_',app_role) as user_role from erp_app_user where app_email_id=?" />
+       		</authentication-provider>
+	</authentication-manager> 
+</beans:beans>

@@ -1,0 +1,136 @@
+
+<!--/.col-->
+
+<div class="col-lg-12">
+  <div class="card">
+      <div class="w3-bar"> 
+          <div class="input-group">
+              <div class="row align-items-center">
+                
+                <!-- <div class="btn-group" dropdown>
+                  <button dropdownToggle type="button" class="btn btn-pill btn btn-primary dropdown-toggle">
+                    New <span class="caret"></span>
+                  </button>
+                  <ul *dropdownMenu class="dropdown-menu" role="menu">
+                    <a class="dropdown-item" [routerLink] = "'/ehs/Hazardous-Form'"><li role="menuitem">Create</li></a>
+                    <a class="dropdown-item" [routerLink] = "'/neha/Invite'"><li role="menuitem">Invite Visitors</li></a>
+                  </ul>
+                </div>   -->
+                <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    <a [routerLink] = "'/ehs/Hazardous-Form'"> <button type="button" class="btn btn-pill btn-block btn-primary">Create</button></a>
+                  </div> 
+                  <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    <a [routerLink] = "'/neha/Email'"> <button type="button" class="btn btn-pill btn-block btn-primary">Email</button></a>
+                  </div>
+                  <div id="fetchbtn">
+                      <button type="button" class="btn btn-pill btn-block btn-primary" (click)="getAllHazardousList();">Click me</button>
+                    </div><hr>
+                  <div class="form-group">
+                      <div class="controls">
+                        <div class="input-group">
+                          <input id="appendedInputButtons" size="18" class="form-control" type="text" placeholder="Search..">
+                          <span class="input-group-append">
+                            <button class="btn btn-secondary" type="button"><i class="fa fa-search"></i></button>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+    <div class="card-header">
+        <i class="fa fa-align-justify"></i><b><i>Hazardous Report</i></b>
+    </div>
+    <div class="card-body">
+      <!-- <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>	Chemical Name</th>
+            <th>	Product Code</th>
+            <th>Date</th>
+            <th>Formula</th>
+            <th>Supplier Name</th>
+        
+          </tr>
+          <tbody>
+              <tr>
+                <td>Gas Oil Diesel</td>
+                <td>MGO-MDO</td>
+                <td>2019/01/01</td>
+                <td>C10H20 TO C15H28 </td>
+                <td>JOHN </td>
+             
+              </tr>
+              <tr>
+                <td>Sulphuric Acid</td>
+                <td>7664-39-9</td>
+                <td>2019/04/01</td>
+                <td>H2So4</td>
+                <td>Mike</td>
+              <tr>
+                <td>Propylene </td>
+                <td>115-07-1</td>
+                <td>2019/02/12</td>
+                <td>C3h6</td>
+                <td>Symond</td>
+         
+              </tr>
+              <tr>
+                <td>LPG</td>
+                <td>1075</td>
+                <td>2019/03/11</td>
+                <td>C3H8,C4H10</td>
+                <td>John</td>
+               
+              </tr>
+              <tr>
+                <td>Chlorine</td>
+                <td>7782-50-5</td>
+                <td>2012/01/21</td>
+                <td>CI2</td>
+                <td>Mike</td>
+                
+              </tr>
+            </tbody>     
+           </table> -->
+           <table class="table table-bordered table-striped table-sm">
+              <thead>
+                  <th>Hazardous ID</th>
+                <th>	Chemical Name</th>
+                <th>	Product Code</th>
+                <th>Formula</th>
+                <th>Supplier Name</th>
+                <!-- <th>Disposal Date</th>
+                <th>Department</th>
+                <th>Methods</th> -->
+                
+              </thead>
+              <tbody>
+                <tr *ngFor="let hazardous of myresponse">
+                  <td>{{hazardous.hazard_id }}</td>
+                  <td>{{hazardous.chemical_name}}</td> 
+                  <td>{{hazardous.prod_code}}</td>
+                  <td>{{hazardous.formula }}</td> 
+                  <td>{{hazardous.supplier_name }}</td>
+                  <!-- <td>{{waste.disposal_date  }}</td>
+                  <td>{{waste.waste_department}}</td>
+                  <td>{{waste.techniques}}</td> -->
+                  
+                </tr>
+              </tbody>  
+            </table>
+
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+        <li class="page-item active">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--/.col-->

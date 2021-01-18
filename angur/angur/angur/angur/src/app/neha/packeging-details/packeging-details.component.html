@@ -1,0 +1,148 @@
+<!-- <div class="animated fadeIn">
+    <div class="row">
+        <div class="col-md-12 mb-8">
+        
+            <form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)">
+  
+            <tabset>
+  
+              <tab>
+                <ng-template tabHeading><i class="icon-list"></i> Product Packeging &nbsp;</ng-template>
+                <div class="card-body">
+                      <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="text-input"><b>Packeging Material</b> </label>
+                        <div class="col-md-6">
+                          <input type="text" id="pack_type" name="pack_type" class="form-control" placeholder="Plz Enter Packeging Material" ngModel>
+                        </div>
+                      </div>
+  
+                      <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="text-input"><b>Weight Of Product </b></label>
+                          <div class="col-md-6">
+                            <input type="text" id="pack_method" name="pack_method" class="form-control" placeholder="Plz Enter Weight" ngModel>
+                          </div>
+                        </div>
+  
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label for="date"> <b>Sealing</b></label>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" id="way_to_handle" name="way_to_handle" class="form-control" placeholder="Plz Enter Sealing" ngModel>
+                          </div>
+                        </div>
+                       
+                         
+                        <br>
+  <div>
+                      <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="text-input"><b>Packeging Date</b></label>
+                          <ejs-datepicker id='pack_date' name="pack_date" placeholder='Select a Date'></ejs-datepicker>
+                          <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            </div>
+                        </div>
+                      </div>
+                      <div>
+                        <br>
+                        <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="text-input"><b>Delivery Date</b></label>
+                          <ejs-datepicker id='delivery_date' name="delivery_date" placeholder='Select a Date'></ejs-datepicker>
+                          <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+              </tab>
+  
+             
+  
+              
+            
+            </tabset>
+            <input type="submit" value="submit">
+          </form>
+        
+         </div>
+         
+    </div>
+   
+    </div> -->
+    <head>
+      <style>
+        .card-header {
+          background-color: #BFC9CA;
+    
+        }
+      </style>
+    </head>
+    <div class="animated fadeIn">
+      <div class="row">
+          <div class>
+                           
+              <a [routerLink] = "'/neha/Packeging'"> <button type="button" class="btn btn-pill btn-block btn-primary">Back</button> </a>
+          </div>
+        <div class="col-md-12">
+              
+          <div class="card">
+            <div class="card-header">
+              <h3>Packeging Details</h3>
+            </div>
+            <div class="card-body">
+              <form (ngSubmit) = "onClickSubmit()">
+                <div class="form-group row">
+                  <label class="col-md-2 col-form-label" for="text-input"> Packeging Material:-</label>
+                  <div class="col-md-3">
+                    <input id="packeging_material" name="packeging_material" type="text" class=" form-control" [(ngModel)]="pro.packeging_material">
+    
+                  </div>
+                  
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-2 col-form-label" for="text-input"> Weight Of Product :-</label>
+                  <div class="col-md-3">
+                    <input id="weight_of_product" name="weight_of_product" type="text" class=" form-control" [(ngModel)]="pro.weight_of_product">
+    
+                  </div>
+                  
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-2 col-form-label" for="text-input">Sealing :-</label>
+                  <div class="col-md-3">
+                    <input id="sealing" name="sealing" type="text" class=" form-control"  [(ngModel)]="pro.sealing">
+    
+                  </div>
+                  
+                </div>
+                
+    
+                <div class="form-group row">
+                  <label class="col-md-2 col-form-label" for="date-input">Packeging Date:- </label>
+                  <div class="col-md-3">
+                    <input class="form-control" id="packeging_date" type="date" name="packeging_date" placeholder="date" [(ngModel)]="pro.packeging_date">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-2 col-form-label" for="date-input">Delivery Date:- </label>
+                  <div class="col-md-3">
+                    <input class="form-control" id="delivery_date" type="date" name="delivery_date" placeholder="date" [(ngModel)]="pro.delivery_date">
+                  </div>
+                </div>
+              
+               
+               
+               
+               
+               
+             
+                <div class="card-footer">
+                  <input type = "submit" value = "submit">
+                </div>
+          </form>
+        </div>
+          </div>
+    
+        </div>
+       
+      </div>
+     
+    </div>

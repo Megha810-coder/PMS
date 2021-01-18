@@ -1,0 +1,210 @@
+<!-- <div class="animated fadeIn">
+  <div class="row">
+      <div class="col-md-12 mb-8">
+      
+          <form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)">
+
+          <tabset>
+
+            <tab>
+              <ng-template tabHeading><i class="icon-list"></i>Vehicle Details&nbsp;</ng-template>
+              <div class="card-body">
+                  <legend>A)Purchaser:-</legend>
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <label for="name-2" class="block"><font size="3" ><b>1.Name Of Purchaser:-</b></font> </label> <input
+                        id="vehicle_name" name="vehicle_name" type="text"
+                        class="form-control" ngModel>
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="text-2" class="block"><font size="3" ><b>2.Phone No:- </b></font></label> <input
+                        id="vehicle_no" name="vehicle_no" type="text" class="form-control" ngModel>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <label for="name-2" class="block"><font size="3" ><b>1.Address:-</b></font> </label> <input
+                        id="vehicle_name" name="vehicle_name" type="text"
+                        class="form-control" ngModel>
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="text-2" class="block"><font size="3" ><b>2.Date:- </b></font></label>  
+                      <ejs-datepicker id='datepicker' placeholder='Select a Date'></ejs-datepicker>
+                      <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+                       
+                      <br><br>
+
+                    <legend>B)Supplier:-</legend>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <label for="name-2" class="block"><font size="3" ><b>1.Name Of Supplier:-</b></font> </label> <input
+                                id="supplier_name" name="supplier_name" type="text"
+                                class="form-control" ngModel>
+                            </div>
+                            <div class="col-sm-6">
+                              <label for="text-2" class="block"><font size="3" ><b>2.Phone No:- </b></font></label> <input
+                                id="supplier_no" name="supplier_no" type="text" class="form-control" ngModel>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                          <div class="col-sm-12">
+                            <label for="address-2" class="block"><font size="3" ><b>3.Address:-</b></font></label>
+                          </div>
+                          <div class="col-sm-12">
+                            <input id="supplier_address" name="supplier_address" type="text"
+                              class="form-control" ngModel>
+                          </div>
+                        </div>
+                      
+<br>
+<br>
+
+<div class="form-group row">
+  <label class="col-md-12 col-form-label" for="text-input"><b>Sign:-&nbsp;&nbsp;____________________</b> </label>
+  
+</div>
+                    
+                </div>
+            </tab>
+
+           
+
+            
+          
+          </tabset>
+          <input type="submit" value="submit">
+          
+        </form>
+      
+       </div>
+       
+  </div>
+ 
+  </div> -->
+
+  <head>
+    <style>
+      .card-header {
+        background-color: #BFC9CA;
+  
+      }
+    </style>
+  </head>
+  <div class="animated fadeIn">
+    <div class="row">
+        <div class>
+                         
+            <a [routerLink] = "'/neha/bill-details'"> <button type="button" class="btn btn-pill btn-block btn-primary">Back</button> </a>
+        </div>
+      <div class="col-md-12">
+            
+        <div class="card">
+          <div class="card-header">
+            <h3>Contractor Details</h3>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit) = "onClickSubmit()">
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label" for="text-input">1.Name Of Purchaser:-</label>
+                <div class="col-md-3">
+                  <!-- <input id="name_purchaser" name="name_purchaser" type="text" class=" form-control" [(ngModel)]="pro.name_purchaser"> -->
+                  {{pro.name_purchaser}}
+  
+                </div>
+                
+              </div>
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label" for="text-input">2.Phone No:-</label>
+                <div class="col-md-3">
+                  <!-- <input id="purchaser_no" name="purchaser_no" type="text" class=" form-control" [(ngModel)]="pro.purchaser_no"> -->
+                  {{pro.purchaser_no}}
+  
+                </div>
+                
+              </div>
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label" for="text-input">3.Address:-</label>
+                <div class="col-md-3">
+                  <!-- <input id="purchaser_address" name="purchaser_address" type="text" class=" form-control" [(ngModel)]="pro.purchaser_address"> -->
+                  {{pro.purchaser_address}}
+  
+                </div>
+                
+              </div>
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label" for="date-input"> Date:- </label>
+                <div class="col-md-3">
+                  <!-- <input class="form-control" id="date" type="date" name="date" placeholder="date" [(ngModel)]="pro.date"> -->
+                  {{pro.date}}
+                </div>
+              </div>
+  
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label" for="text-input">1.Name Of Supplier:-</label>
+                <div class="col-md-3">
+                  <!-- <input id="supplier_name" name="supplier_name" type="text" class=" form-control" [(ngModel)]="pro.supplier_name"> -->
+                  {{pro.supplier_name}}
+  
+                </div>
+                
+              </div>
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label" for="text-input">2.Phone No:-</label>
+                <div class="col-md-3">
+                  <!-- <input id="supplier_no" name="supplier_no" type="text" class=" form-control" [(ngModel)]="pro.supplier_no"> -->
+                  {{pro.supplier_no}}
+  
+                </div>
+                
+              </div>
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label" for="text-input">3.Address:-</label>
+                <div class="col-md-3">
+                  <!-- <input id="supplier_address" name="supplier_address" type="text" class=" form-control"  [(ngModel)]="pro.supplier_address"> -->
+                  {{pro.supplier_address}}
+  
+                </div>
+                
+              </div>
+              <br>
+              <br>
+              
+              <div class="form-group row">
+                <label class="col-md-12 col-form-label" for="text-input"><b>Sign:-&nbsp;&nbsp;____________________</b> </label>
+                
+              </div>
+  
+              
+              
+            
+              
+              
+             
+            
+           
+             
+        </form>
+      </div>
+        </div>
+  
+      </div>
+     
+    </div>
+   
+  </div>

@@ -1,0 +1,619 @@
+
+
+<div class="animated fadeIn">
+    <div class="row">
+
+<tabset>
+    <tab>
+      <ng-template tabHeading><i class="icon-list"></i><b> Personal &nbsp;</b></ng-template>
+      <div class="tab-pane active" id="personal" role="tabpanel">
+        <div class="row">
+     <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+               <div class="row">
+                     <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                       <label for="emp_code" class="block"><b>Employee Code</b></label>
+                      </div>
+                     <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                         <input id="emp_code" name="emp_code" type="text" class=" form-control" placeholder="employee code"/>
+                     </div>
+       </div>
+              </div>
+            
+         </div>
+   
+         <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div class="row">
+                <div class="  col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                       <label for="emp_fname" class="block"><b>Full Name</b></label>
+                      </div>
+         <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                       <select name="emp_title" id="emp_title" class="form-control"
+                           required data-bv-notempty-message="Please select title.">
+                           <option value="">---Select Title---</option>
+                             <option value="Mr.">Mr.</option>
+                             <option value="Mrs.">Mrs.</option>
+                             <option value="Miss.">Miss.</option>
+                          </select>
+         </div>
+         <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                    <input id="emp_fname" name="emp_fname" type="text" class=" form-control" 
+                               placeholder="First Name"
+                               required data-bv-notempty-message="Please enter first name.">
+                   </div>
+                   <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                         <input id="emp_mname" name="emp_mname" type="text" class=" form-control"
+                         placeholder="Middle Name" 
+                         required data-bv-notempty-message="Please enter middle name.">
+                     </div>
+                     <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                         <input id="emp_lname" name="emp_lname" type="text" class=" form-control"
+                         placeholder="Last Name" 
+                         required data-bv-notempty-message="Please enter last name.">
+                     </div>
+                </div>
+              </div>
+     
+     </div>
+   
+         <div class=row>
+             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                 <div class="row">
+                     <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                         <label for="emp_gender" class="block"><b>Gender</b></label>
+                     </div>
+                     <div class="form-group form-radio col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                         <div class="radio radio-inline">
+                             <label>
+                                 <input type="radio" class="form_control" name="emp_gender" id="emp_gender_1" value="1">
+                                 <i class="helper"></i>Male
+                             </label>
+                         </div>
+                         <div class="radio radio-inline">
+                             <label>
+                                 <input type="radio" class="form_control" name="emp_gender" id="emp_gender_2" value="2">
+                                 <i class="helper"></i>Female
+                             </label>
+                         </div>
+                         <div class="radio radio-inline">
+                             <label>
+                                 <input type="radio" class="form_control" name="emp_gender" id="emp_gender_3" value="3"/>
+                                 <i class="helper"></i>Transgender
+                             </label>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             
+             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                 <div class="row">
+                     <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                         <label for="emp_date" class="block"><b>Date of Birth</b></label>
+                     </div>
+                     <div class="form-group col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                      <ejs-datepicker id='datepicker' placeholder='Select a DOB'></ejs-datepicker>
+               </div>
+              </div>
+             </div> 
+         </div>
+    
+         
+         <div class="row">
+             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                 <div class="row">
+                     <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                         <label for="emp_place" class="block"><b>Place Of Birth</b></label>
+                     </div>
+                     <div class="form-group col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                         <input type="text" id="emp_place" name="emp_place" class="form-control" 
+                             placeholder="Enter your place of birth"
+                             required data-bv-notempty-message="Please select place of birth."/>
+                     </div>
+                 </div>
+             </div>
+
+             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                 <div class="row">
+                    <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                         <label for="emp_place" class="block"><b>Marital Status</b></label>
+                     </div>
+                    <div class="form-group col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                         <select  class="form-control" id="emp_marital_status" name="emp_marital_status"
+                          required data-bv-notempty-message="Please select marital status.">
+                             <option value="1">Single</option>
+                             <option value="2">Married</option>
+                             <option value="3">Divorce</option>
+                             <option value="4">Widowe</option>
+                             <option value="5">Legal Cohabitant</option>
+                         </select>
+                     </div>
+                 </div>
+             </div>
+         </div>
+      </div>
+    </tab>
+
+    <tab>
+      <ng-template tabHeading><i class="icon-calculator"></i><b> Educational & Qualification</b> &nbsp;</ng-template>
+      <div class="tab-pane" id="education" role="tabpanel">
+				<input id="edu_id"  name="education_list[0].edu_id" type="hidden"
+							class=" form-control" value="">
+				<div class="form-group row">
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+						<label for="edu_university" class="block"><b>Higher Qualification</b></label>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+						<select name="education_list[0].edu_certificate" id="edu_certificate"
+							class="form-control">
+              <option value="">Select Certificate</option>
+              <option value="HSC">HSC</option>
+              <option value="SSC">SSC</option>
+              <option value="BachelorsDegree">Bachelors Degree</option>
+              <option value="MastersDegree">Masters Degree</option>
+              <option value="PhD">PhD</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+						<label for="edu_university" class="block"><b>University</b></label>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+						<input id="edu_university" name="education_list[0].edu_university" type="text"
+							class=" form-control" required
+							data-bv-notempty-message="Please enter university.">
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+						<label for="edu_passing_yrar" class="block"><b>Passing Year</b></label>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+						<input id="edu_passing_year" name="education_list[0].edu_passing_year" type="text"
+							class="form-control ">
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+						<label for="edu_degree" class="block"><b>Degree</b></label>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+						<select id="edu_degree" name="education_list[0].edu_degree" class="form-control">
+              <option value="">Select Degree</option>
+              <option value="BSc">BSc</option>
+              <option value="BE">B.E.</option>
+              <option value="ME">M.E.</option>
+              <option value="MTech">M.Tech</option>
+              <option value="BTech">B.Tech</option>
+              <option value="MSc">MSc</option>
+						</select>
+					</div>
+				</div>
+      </div>    </tab>
+      
+    <tab>
+      <ng-template tabHeading><i class="icon-phone"></i><b> Contact</b></ng-template>
+      <div class="tab-pane" id="Contact" role="tabpanel">
+				<div class="row">
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+						<label for="emp_mobile_no" class="block"><b>Mobile No</b></label>
+					</div>
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 form-group">
+						<input id="emp_mobile_no" name="contacts.emp_mobile_no" type="text"
+							class=" form-control" required
+							data-bv-notempty-message="Please enter mobile number.">
+					</div>					
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+						<label for="emp_mobile_no" class="block"><b>Alternative Mobile No</b></label>
+					</div>
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 form-group">
+						<input id="emp_alt_mobile_no" name="contacts.emp_alt_mobile_no" type="text"
+							class=" form-control" >
+					</div>
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+						<label for="emp_land_no" class="block"><b>LandLine No</b></label>
+					</div>
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 form-group">
+						<input id="emp_landline_no" name="contacts.emp_landline_no" type="text"
+							class=" form-control" >
+					</div>
+					
+				</div>
+				
+				<hr>
+				
+				<div class="row">
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+						<label for="emp_email" class="block"><b>Email id</b></label>
+					</div>
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 form-group">
+						<input id="emp_email" name="contacts.emp_email" type="email"
+							class=" form-control" required
+							data-bv-notempty-message="Please enter email id.">
+					</div>
+					
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+						<label for="emp_alt_email" class="block"><b>Alternative Email id</b></label>
+					</div>
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 form-group">
+						<input id="emp_alt_email" name="contacts.emp_alt_email" type="email"
+							class=" form-control" >
+					</div>
+				</div>
+				
+				<hr>
+				
+				<div class="row">
+				
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+						<label for="emp_twitter_link" class="block"><b>Twitter-link</b></label>
+					</div>
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 form-group">
+						<input id="emp_twitter_link" name="contacts.emp_twitter_link" type="text"
+							class=" form-control" >
+					</div>
+					
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+						<label for="emp_facebook_link" class="block"><b>Facebook-link</b></label>
+					</div>
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 form-group">
+						<input id="emp_facebook_link" name="contacts.emp_facebook_link" type="text"
+							class=" form-control" >
+					</div>
+					
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+						<label for="emp_instagram_link" class="block"><b>Instagram-link</b></label>
+					</div>
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 form-group">
+						<input id="emp_instagram_link" name="contacts.emp_instagram_link" type="text"
+							class=" form-control" >
+					</div>
+					
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 form-group">
+						<label for="emp_blog_link" class="block"><b>Blog-link</b></label>
+					</div>
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+						<input id="emp_blog_link" name="contacts.emp_blog_link" type="text"
+							class=" form-control" >
+					</div>
+					
+					
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+						<label for="emp_website" class="block"><b>Website</b></label>
+					</div>
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 form-group">
+						<input id="emp_website" name="contacts.emp_website" type="text"
+							class=" form-control" >
+					</div>
+				</div>
+				
+				<hr>
+				
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="row">
+							<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+								<label for="corr_line1" class="block"><b>Correspondence Address</b></label>
+							</div>
+							<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group">
+								<input id="corr_line1" name="contacts.address_list[0].add_line1"
+									type="text" class=" form-control">
+							</div>
+							<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group">
+								<input id="corr_line2" name="contacts.address_list[0].add_line2"
+									type="text" class=" form-control">
+							</div>
+							<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group">
+								<select id="corr_city" name="contacts.address_list[0].enq_city.city_id" class="form-control" required data-bv-notempty-message="Please select city.">
+                                    <option value="">---Select City---</option>
+                                </select>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-sm-6">
+						<div class="row">
+							<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+								<label for="corr_line1" class="block"><b>Permanent Address</b></label>
+							</div>
+							<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group">
+								<input id="per_line1" name="contacts.address_list[1].add_line1"
+									type="text" class=" form-control">
+							</div>
+							<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group">
+								<input id="per_line2" name="contacts.address_list[1].add_line1"
+									type="text" class=" form-control">
+							</div>
+							<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group">
+								<select id="per_city" name="contacts.address_list[1].enq_city.city_id" class="form-control" required data-bv-notempty-message="Please select city.">
+                                    <option value="">---Select City---</option>
+                                </select>
+							</div>
+						</div>
+					</div>	
+					
+				</div>
+			</div>    </tab>
+
+    <tab>
+        <ng-template tabHeading><i class="icon-briefcase"></i><b> Bank Details</b></ng-template>
+        <div class="tab-pane" id="bank" role="tabpanel">
+          <div class="row">
+                         <div class="col-sm-6">
+           <div class="row">
+             <label class="col-sm-3 col-form-label" ><b>Account Number</b></label>
+             <div class="form-group col-sm-9"> 
+             <input type="text" class="form-control" id="acc_number" name="account.acc_number"
+             placeholder="Enter Your Account Number "
+                  required data-bv-notempty-message="Please enter Account Number .">
+                               </div>
+                              </div>
+                         <div class="row">
+                                <label class="col-sm-3 col-form-label"><b>Type </b></label>
+                                 <div class=" form-group col-sm-9">
+                                     <select type="text" class="form-control" id="acc_type" name="account.acc_type"
+                  required data-bv-notempty-message="Please enter Account Type.">
+                  <option value="">---Select Type ---</option> 
+                                       <option value="Megha">Normal</option> 
+                                        <option value="Salary account">Salary account</option> 
+                                         <option value="saving">saving</option> 
+                                         <option value="current">current</option> 
+                                          </select> 
+                                   </div>
+                           </div>
+                          
+                      </div>
+              <div class="col-sm-6">
+                         <div class="row">
+                                <label class="col-sm-3 col-form-label"><b>Bank</b></label>
+                                 <div class=" form-group col-sm-9">
+                 <select type="text" class="form-control" id="acc_bank" name="bank.bnk_id" 
+                                         required data-bv-notempty-message="Please Enter Bank Details">
+                                          <option value="">---Select ---</option> 
+                                          </select>                                        </div>
+                           </div>
+                          <div class="row">
+                             <label class="col-sm-3 col-form-label"><b>Account Holder</b></label>
+                                 <div class=" form-group col-sm-9">
+                                     <input type="text" class="form-control" id="acc_holder1" name="account.acc_holder1" 
+                                     placeholder="Enter your Account Holder" 
+                                     required data-bv-notempty-message="Please enter Account Holder.">
+                                 </div>
+                          </div>
+                      </div>
+                   </div> 
+                   </div>     
+                   </tab>
+
+      <tab>
+          <ng-template tabHeading><i class="icon-home"></i><b>Company</b></ng-template>
+          <div class="tab-pane" id="company">
+          <div class="row">
+            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                <label for="emp_company_ph_no" class="block"><b>Mobile No:</b></label>
+           </div>
+          <div class="col-sm-2 col-md-2 col-lg-3 col-xl-3 form-group">
+            <input id="emp_company_ph_no" type="text"
+            class=" form-control" placeholder="Please enter mobile number...">
+          </div>	
+          <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+             <label for="emp_company_email" class="block"><b>Company Email:</b></label>
+          </div>
+          <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 form-group">
+            <input id="emp_company_email"  type="email"
+               class=" form-control" placeholder="Please enter email id..." >
+          </div>
+          <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+             <label for="emp_work_location" class="block"><b>Work Location:</b></label>
+          </div>
+        <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 form-group">
+             <input id="emp_work_location" type="text"
+             class=" form-control" placeholder="Please enter work location...">
+            </div>
+              </div>   
+      </div>   
+     </tab>
+
+        <tab>
+            <ng-template tabHeading><i class="icon-people"></i><b> Position</b></ng-template>
+            <div class="tab-pane" id="position" >
+                    <div class="row">
+            <div class="col-sm-6">
+                <div class="row">
+                    <label class="col-sm-3 col-form-label" ><b>Job Description:</b></label>
+                    <div class="form-group col-sm-9"> 
+                    <textarea rows="4" cols="50" class="form-control" iplaceholder="Enter Your Job Description Details"
+                    placeholder="Please enter Job Description."></textarea>
+                    </div>
+                     </div>
+                     <div class="row">
+                    <label class="col-sm-3 col-form-label"><b>Employee Name:</b></label>
+                        <div class=" form-group col-sm-9">
+                            <input type="text" class="form-control" id="emp_name" name="position_list[0].emp_name" 
+                            placeholder="Please enter employee name.">
+                        </div>
+                 </div>
+                <div class="row">
+                       <label class="col-sm-3 col-form-label"><b>Job Position:</b></label>
+                        <div class=" form-group col-sm-9">
+                            <select type="text" class="form-control" id="emp_job_position" name="position_list[0].emp_job_position"
+                            placeholder="Please enter Your Job Position.">
+                             <option value="">---Select Position ---</option> 
+                              <option value="engineer">Software Engineer</option> 
+                               <option value="designert">Graphics Designer</option> 
+                                <option value="accountant">Accountant</option> 
+                                <option value="developer">Web Developer</option> 
+                               </select> 
+                        </div>
+                </div>
+                
+                   </div>
+                   <div class="col-sm-6">
+                    <div class="row">
+                        <label class="col-sm-3 col-form-label"><b>Job Type:</b></label>
+                            <div class=" form-group col-sm-9">
+                                <select type="text" class="form-control" id="emp_job_type" name="position_list[0].emp_job_type" 
+                                placeholder="Please enter Empolyee Job Type.">
+                                 <option value="">---Select Job Type ---</option> 
+                                  <option value="fullTime">Full Time</option> 
+                                   <option value="partTime">Part Time</option> 
+                                    <option value="permanent">Permanent</option>
+                                    <option value="contract">Contract</option> 
+                                   </select> 
+                            </div>
+                     </div>
+                     <div class="row">
+                        <label class="col-sm-3 col-form-label" ><b>Employee  Manager:</b></label>
+                        <div class="form-group col-sm-9"> 
+                        <input type="text" class="form-control" id="emp_position_manager" name="position_list[0].emp_position_manager"
+                        placeholder="Please enter Your Manager name.">
+                        </div>
+                         </div>
+                         <div class="row">
+                        <label class="col-sm-3 col-form-label"><b>Employee Department:</b></label>
+                            <div class=" form-group col-sm-9">
+                                <select type="text" class="form-control" id="emp_position_department" name="position_list[0].emp_position_department" 
+                                placeholder="Please enter Empolyee Department.">
+                                 <option value="">---Select Department ---</option> 
+                                 <option value="IT">IT Department </option>
+                                 <option value="Accounting">Accounting Department </option>
+                                 <option value="Production">Production Department </option>
+                                 <option value="Sales">Sales Department</option>
+                                   </select> 
+                            </div>
+                     </div>
+              </div>
+              
+              <div class="col-sm-6">
+                <div class="row">
+                   <label class="col-sm-3 col-form-label"><b>Employee Shift:</b></label>
+                       <div class=" form-group col-sm-9">
+                           <select type="text" class="form-control" id="emp_shift" name="position_list[0].emp_shift" 
+                           placeholder="Employee Shift" 
+                           required data-bv-notempty-message="Please enter Empolyee Job Type.">
+                            <option value="">---Select Shift ---</option> 
+                             <option value="1">7:00 to 3:30</option> 
+                              <option value="2">3:30 to 12:00</option> 
+                               <option value="3">12:00 to 7</option> 
+                              </select> 
+                       </div>
+                </div>
+             </div>
+             <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <label for="emp_date" class="block"><b>Joining Date:</b></label>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <ejs-datepicker id='datepicker' placeholder='select your Date of Joining'></ejs-datepicker>
+                          </div>
+                       </div>
+                </div>
+             </div>
+            </div>
+            </tab>
+
+          <tab>
+              <ng-template tabHeading><i class="icon-pencil"></i><b>Work Experience</b></ng-template>
+              <div class="tab-pane" id="Work" role="tabpanel">
+              <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <label for="emp_name" class="block" ><b>Employee Name:</b></label>
+              </div>
+              
+              <div class="col-sm-2 col-md-2 col-lg-3 col-xl-3 form-group">
+                <input id="emp_name" name="work_list[0].emp_name" type="text"
+                class=" form-control" placeholder="Please enter employee name.">
+              </div>	
+              </div>	
+              <div class="row">	
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+               <label for="emp_work_location" class="block"><b>Work Location:</b></label>
+            </div>
+            
+            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 form-group">
+              <input id="emp_work_location" name="work_list[0].emp_work_location" type="text"
+                class=" form-control" placeholder="Please enter Work location." >
+            </div>
+            </div>
+            <div class="row">	
+              <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                <label for="emp_phone" class="block"><b>Phone No:</b></label>
+              </div>
+            
+              <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 form-group">
+                <input id="emp_phone" name="work_list[0].emp_phone" type="text"
+                  class=" form-control" placeholder="Please enter Phone no." >
+              </div>
+              </div> 
+              <div class="row">	
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                <label for="emp_job" class="block"><b>Job:</b></label>
+                </div>
+                
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 form-group">
+                  <input id="emp_job" name="work_list[0].emp_job" type="text"
+                  class=" form-control"  placeholder="Please enter Job name.">
+                </div>
+                </div>
+                <div class="row">	
+                  <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <label for="emp_salary" class="block"><b>Salary:</b></label>
+                </div>
+                
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 form-group">
+                  <input id="emp_salary" name="work_list[0].emp_salary" type="text"
+                    class=" form-control"  placeholder="Please enter your Salary.">
+                </div>
+                </div> 
+                <div class="row">	
+                  <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <label for="emp_experiance" class="block"><b>Total Experiance:</b></label>
+                  </div>
+                  
+                  <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 form-group">
+                    <input id="emp_experiance" name="work_list[0].emp_experiance" type="text"
+                    class=" form-control" placeholder="Please enter ur Total Experiance ." >
+                  </div>
+                  </div>
+                </div>
+            </tab>
+            
+            <tab>
+                <ng-template tabHeading><i class="icon-pencil"></i><b>Document</b></ng-template>
+                <div class="tab-pane" id="doc" role="tabpanel">
+                  <input id="emp_document_id"  name="document_list[0].emp_document_id" type="hidden" class=" form-control" value="">
+               <div class="row">
+            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+              <label for="emp_doc" class="block"><b>Document 1:-</b></label>
+            </div>
+          <div class="  col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+                     <input type="file" class="form-control" onchange="document.getElementById('emp_doc1_view').src = window.URL.createObjectURL(this.files[0])" id="emp_doc1" name="emp_doc1">
+                   </div>	
+          </div>	<br><br>
+         
+         <div class="row">
+          <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+          <label for="emp_doc" class="block"><b>Document 2:-</b></label>
+          </div>
+            <div class="  col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+                          <input type="file" class="form-control" onchange="document.getElementById('emp_doc2').src = window.URL.createObjectURL(this.files[0])" id="emp_doc2" name="document.emp_doc2">
+                      </div>	
+        </div>	<br><br>
+   
+         <div class="row">
+          <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+            <label for="emp_doc" class="block"><b>Document 3:-</b></label>
+          </div>
+          <div class="  col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+                          <input type="file" class="form-control" onchange="document.getElementById('emp_doc3').src = window.URL.createObjectURL(this.files[0])" id="emp_doc3" name="document.emp_doc3">
+                     </div>	
+          </div>	
+               </div>
+              </tab>
+              
+              
+
+  </tabset>
+  </div>
+  </div>

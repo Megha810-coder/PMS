@@ -1,0 +1,148 @@
+<!-- <h3><span>Vehicle Details</span></h3>
+							<fieldset>
+								<legend>D)Vehicle Details:-</legend>
+								<div class="form-group row">
+									<div class="col-sm-12">
+										<div class="row">
+											<div class="col-sm-6">
+												<label for="name-2" class="block"><font size="3" ><b>1.Name:-</b></font> </label> <input
+													id="vehicle_name" name="ehs_Vehicle.vehicle_name" type="text"
+													class="form-control">
+											</div>
+											<div class="col-sm-6">
+												<label for="text-2" class="block"><font size="3" ><b>2.No:- </b></font></label> <input
+													id="vehicle_no" name="ehs_Vehicle.vehicle_no" type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+								
+
+                    			<div class="form-group row">
+										<div class="col-sm-6">
+												<label for="emp_date" class="block"><font size="3" ><b>3.Delivery Date:-</b></font></label> <input
+													id="del_date" name="ehs_Vehicle.del_date" type="text"
+													class="form-control" placeholder="select your Delivery Date" />
+											</div>
+								
+								</div>
+							<br>
+								<legend>E)Supplier Details:-</legend>
+								<div class="form-group row">
+									<div class="col-sm-12">
+										<div class="row">
+											<div class="col-sm-6">
+												<label for="name-2" class="block"><font size="3" ><b>1.Name:-</b></font> </label> <input
+													id="suplier_name" name="ehs_Vehicle.suplier_name" type="text"
+													class="form-control">
+											</div>
+											<div class="col-sm-6">
+												<label for="text-2" class="block"><font size="3" ><b>2.Phone No:- </b></font></label> <input
+													id="suplier_no" name="ehs_Vehicle.suplier_no" type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-sm-12">
+										<label for="address-2" class="block"><font size="3" ><b>3.Address:-</b></font></label>
+									</div>
+									<div class="col-sm-12">
+										<input id="suplier_address" name="ehs_Vehicle.suplier_address" type="text"
+											class="form-control">
+									</div>
+								</div>
+								
+								<br><br>
+								<legend>F)Vehicle Driver Details:-</legend>
+								<div class="form-group row">
+									<div class="col-sm-12">
+										<div class="row">
+											<div class="col-sm-6">
+												<label for="name-2" class="block"><font size="3" ><b>1.Name:-</b></font> </label> <input
+													id="driver_name" name="ehs_Vehicle.driver_name" type="text"
+													class="form-control">
+											</div>
+											<div class="col-sm-6">
+												<label for="text-2" class="block"><font size="3" ><b>2.Phone No:-</b> </font></label> <input
+													id="driver_no" name="ehs_Vehicle.driver_no" type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+              </fieldset> -->
+              
+              <div class="col-lg-12">
+                  <div class="card">
+                      <div class="w3-bar"> 
+                          <div class="input-group">
+                              <div class="row align-items-center">
+                                
+                                <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+									<button type="button" class="btn btn-pill btn-block btn-primary" (click)="save();">Create</button>
+								</div> 
+                                  <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                                    <a [routerLink] = "'/neha/Email'"> <button type="button" class="btn btn-pill btn-block btn-primary">Email</button></a>
+                                  </div>
+                                  <!-- <div id="fetchbtn">
+                                    <button type="button" class="btn btn-outline-success" (click)="getAllProduct();">Show List</button>
+                                  </div> -->
+								  <div class="form-group" >
+                              
+										<div class="controls" >
+											<div class="input-group" >
+				  
+											<input id="appendedInputButtons" size="16" class="form-control" type="text" name= "search" [(ngModel)]="searchText">
+											<span class="input-group-append">
+											
+											  <button class="btn btn-secondary" type="button" >Search</button>
+											 
+											</span>
+										  </div>
+										</div>
+									  </div>
+                                </div>
+                          </div>
+                        </div>
+                    <div class="card-header">
+                        <i class="fa fa-align-justify"></i>Delivery
+                    </div>
+                    <div class="card-body">
+                     <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>VEHICLE ID</th>
+                            <th>VEHICLE NAME</th>
+                            <th>VEHICLE NO </th>
+                            <th>SUPPLIER NAME</th>
+							<th>PHONE NO</th>
+							
+                          </tr>
+                          <tbody>
+                            <tr *ngFor="let Vehicle of myresponse | filter:searchText">
+                              <td>{{Vehicle.vehicle_id}}</td>
+                              <td>{{Vehicle.vehicle_name}}</td>
+                              <td>{{Vehicle.vehicle_no}}  </td>
+							  <td>{{Vehicle.supplier_name}}  </td>
+							  <td>{{Vehicle.supplier_no}}  </td> 
+							 
+							  <td><button type="button" class="btn btn-info mr-1" (click)="updateVehicle(Vehicle);">UPDATE</button> 
+								<button type="button" class="btn btn-info mr-1" (click)="viewVehicle(Vehicle);">VIEW</button> 
+								 <button type="button" class="btn btn-info mr-1" (click)="DeleteVehicle(Vehicle.vehicle_id);">DELETE</button></td>
+							</tr>
+                           
+                          </tbody>  
+                           </table>
+                      <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                        <li class="page-item active">
+                          <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div> 

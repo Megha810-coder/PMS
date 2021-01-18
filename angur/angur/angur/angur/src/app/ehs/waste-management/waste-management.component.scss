@@ -1,0 +1,17 @@
+.w3-bar{
+    background-color: white;
+    height:100%;
+    width: 100%;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    flex-flow: row wrap;
+    border-bottom: 1px solid #cccccc;
+}
+
+.controls{
+    position: absolute;
+    right: 0px;
+    margin: 0px;
+}

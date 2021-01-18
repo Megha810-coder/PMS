@@ -1,0 +1,271 @@
+<div class="animated fadeIn">
+  <div class="row">
+      <div class="card-footer">
+          <a [routerLink] = "'/ehs/Hazardous Management'"> <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Back </button></a>
+      </div>
+      <div class="col-md-12 mb-8">
+          <!-- Nav tabs -->
+          <tabset>
+            <tab>
+              <ng-template tabHeading><i class="icon-list"></i> Material Data Safety Sheet&nbsp;</ng-template>
+              <div class="card-body">
+                  <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                    <h3>A.MSDS:</h3>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <label for="date"> <b>1)Chemical Name</b></label>
+                      </div>
+                      <div class="col-md-3">
+                          <input type="text" id="event_name" name="event_name" class="form-control" placeholder="">
+                        </div>
+
+                     <div class="col-md-3">
+                        <label for="date"><b>2)Synonyms</b></label>
+                      </div>
+                       <div class="col-md-3">
+                          <input type="text" id="event_name" name="event_name" class="form-control" placeholder=" ">
+                        <br></div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-3">
+                        <label for="date"> <b>3)Product Code</b></label>
+                      </div>
+                      <div class="col-md-3">
+                          <input type="text" id="event_name" name="event_name" class="form-control" placeholder="">
+                        </div>
+
+                     <div class="col-md-3">
+                        <label for="date"><b>4)Supplier Name</b></label>
+                      </div>
+                       <div class="col-md-3">
+                          <input type="text" id="event_name" name="event_name" class="form-control" placeholder="  ">
+                        <br></div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="text-input"><b>5)Formula </b></label>
+                        <div class="col-md-6">
+                          <input type="text" id="event_name" name="event_name" class="form-control" placeholder="  ">
+                        </div>
+                      </div>
+
+              <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="text-input"><b>6)Supplier Address</b></label>
+                  <div class="col-md-6">
+                      <textarea id="textarea" name="textarea" rows="4" class="form-control" placeholder="Write something here..."></textarea>
+                    </div>
+                </div>
+
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="text-input"><b>7)Supplier Phone</b></label>
+                    <div class="col-md-6">
+                      <input type="text" id="event_name" name="event_name" class="form-control" placeholder="  ">
+                    </div>
+                  </div>
+
+    <h3>B.Physical and Chemical Properties:</h3>
+    <hr>
+        <div class="row">
+            <div class="col-md-3">
+              <label for="date"> <b>1)Physical State</b></label>
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="event_name" name="event_name" class="form-control" placeholder="  ">
+              </div>
+
+           <div class="col-md-3">
+              <label for="date"><b>2)Odor and Appearance</b></label>
+            </div>
+             <div class="col-md-3">
+                <input type="text" id="event_name" name="event_name" class="form-control" placeholder="  ">
+              <br></div>
+          </div>
+
+          <div class="row">
+              <div class="col-md-3">
+                <label for="date"> <b>3)vapor Pressure</b></label>
+              </div>
+              <div class="col-md-3">
+                  <input type="text" id="event_name" name="event_name" class="form-control" placeholder="  ">
+                </div>
+  
+             <div class="col-md-3">
+                <label for="date"><b>4)Vapor Density</b></label>
+              </div>
+               <div class="col-md-3">
+                  <input type="text" id="event_name" name="event_name" class="form-control" placeholder="  ">
+                <br></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                  <label for="date"> <b>5)Evaporation Rate</b></label>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" id="event_name" name="event_name" class="form-control" placeholder="  ">
+                  </div>
+    
+               <div class="col-md-3">
+                  <label for="date"><b>6)Boiling Point</b></label>
+                </div>
+                 <div class="col-md-3">
+                    <input type="text" id="event_name" name="event_name" class="form-control" placeholder="  ">
+                  <br></div>
+              </div>
+              <div class="row">
+                  <div class="col-md-3">
+                    <label for="date"> <b>7)Melting Point</b></label>
+                  </div>
+                  <div class="col-md-3">
+                      <input type="text" id="event_name" name="event_name" class="form-control" placeholder="  ">
+                    </div>
+                </div>
+                  </form>
+                </div>
+            </tab>
+
+            <tab>
+              <ng-template tabHeading><i class="icon-calculator"></i> Hazard Identification &nbsp;</ng-template>
+           <h3>C.Hazard Identification:</h3>
+           <hr>
+              <div class="form-group row">
+									<div class="col-sm-12">
+										<div class="row">
+											<div class="col-sm-6">
+												<label for="name-2" class="block"><b>1)Skin Contact</b></label>
+												<textarea rows="3" cols="50" id="skin_contact" name="identification.skin_contact"
+													type="text" class=" form-control"></textarea>
+											</div>
+											<div class="col-sm-6">
+											
+												<label for="text-2" class="block"><b>2)Eye Contact</b></label>
+												<textarea rows="3" cols="50" id="eye_contact" name="identification.eye_contact"
+													type="text" class=" form-control"></textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <label for="name-2" class="block"><b>3)Inhalation</b></label>
+                          <textarea rows="3" cols="50" id="inhalation" name="identification.inhalation"
+                            type="text" class=" form-control"></textarea>
+                        </div>
+                        <div class="col-sm-6">
+                          <label for="name-2" class="block"><b>4)Long term Toxic
+                            Effect</b></label>
+                          <textarea rows="3" cols="50" id="toxic_effect" name="identification.toxic_effect"
+                            type="text" class=" form-control"></textarea>
+                        </div>
+  
+                      </div>
+                    </div>
+                  </div>
+
+          <h3>D.Risk Assessment:</h3>
+          <hr>     
+              <div class="form-group row">
+                  <div class="col-sm-12">
+                    <label for="address-2" class="block"><b>1)</b></label>
+                  </div>
+                  <div class="col-sm-6">
+                    <input id="RA1" name="identification.RA1" type="text"
+                      class="form-control">
+                  </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                      <label for="address-2" class="block"><b>2)</b></label>
+                    </div>
+                    <div class="col-sm-6">
+                      <input id="RA2" name="identification.RA2" type="text"
+                        class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                      <div class="col-sm-12">
+                        <label for="address-2" class="block"><b>3)</b></label>
+                      </div>
+                      <div class="col-sm-6">
+                        <input id="RA2" name="identification.RA2" type="text"
+                          class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                          <label for="address-2" class="block"><b>4)</b></label>
+                        </div>
+                        <div class="col-sm-6">
+                          <input id="RA2" name="identification.RA2" type="text"
+                            class="form-control">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                          <div class="col-sm-12">
+                            <label for="address-2" class="block"><b>5)</b></label>
+                          </div>
+                          <div class="col-sm-6">
+                            <input id="RA2" name="identification.RA2" type="text"
+                              class="form-control">
+                          </div>
+                        </div>
+            </tab>
+
+            <tab>
+              <ng-template tabHeading><i class="icon-pie-chart"></i> Treatmeent</ng-template>
+              <h3>E.Treatment:</h3>
+              <hr>
+              <div class="form-group row">
+									<div class="col-sm-12">
+										<div class="row">
+											<div class="col-sm-6">
+												<label for="name-2" class="block"><b>1)Skin Contact</b></label>
+												<textarea rows="3" cols="50" id="skin_contacts" name="first_aid.skin_contacts"
+													type="text" class=" form-control"></textarea>
+											</div>
+											<div class="col-sm-6">
+												<label for="text-2" class="block"><b>2)Eye Contact</b></label>
+												<textarea rows="3" cols="50" id="eye_contacts" name="first_aid.eye_contacts"
+													type="text" class=" form-control"></textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<div class="col-sm-12">
+										<div class="row">
+											<div class="col-sm-6">
+												<label for="name-2" class="block"><b>3)Inhalation</b></label>
+												<textarea rows="3" cols="50" id="inhalations" name="first_aid.inhalations"
+													type="text" class=" form-control"></textarea>
+											</div>
+									</div>
+                </div>
+                </div>
+           
+        <h3>F.Documents:</h3>
+        <hr>
+                <div class="row">
+                    <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <label for="emp_doc" class="block"><b>Document Name:</b></label>
+                    </div>
+                    <div class="  col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+                        <input type="file" class="form-control" onchange="document.getElementById('emp_doc2').src = window.URL.createObjectURL(this.files[0])" id="emp_doc2" name="document.emp_doc2">
+                    </div>	
+                </div>
+              
+            </tab>
+          </tabset>
+       </div> <!--/.col-->
+  </div>
+  <div class="card-footer">
+    <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Save</button>
+    <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset </button>
+    <button type="back" class="btn btn-sm btn-success"><i class="fa fa-backward"></i> &nbsp; Back</button>
+  </div>
+  </div>

@@ -1,0 +1,224 @@
+
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+	
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/erp_software" />
+		<property name="username" value="root" />
+		<property name="password" value="" />
+    </bean>
+    
+   	<bean id="sessionFactory"
+    		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+    	<property name="dataSource" ref="dataSource" />
+    	<property name="packagesToScan" value="com.spcl.erp.model" />
+    	<property name="hibernateProperties">
+    	<props>
+    		<prop key="hibernate.show_sql">true</prop>
+    		<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+    		<prop key="hibernate.hbm2ddl.auto">update</prop>
+    	</props>
+    	</property>
+    </bean>
+    
+    <bean id="transactionManager"
+        class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+    	<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	
+	<bean id="CompanyDao" class="com.spcl.erp.dao.CompanyDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+	
+	<bean id="compService" class="com.spcl.erp.services.CompanyServiceImpl" >
+        <property name="CompanyDao" ref="CompanyDao" />
+    </bean>
+	
+	<bean id="leaveDao" class="com.spcl.erp.dao.LeaveDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+   
+    <bean id="leaveService" class="com.spcl.erp.services.LeaveServiceImpl" >
+        <property name="leaveDao" ref="leaveDao" />
+    </bean>
+      
+    <bean id="personDAO" class="com.spcl.erp.dao.PersonDAOImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+	<bean id="personService" class="com.spcl.erp.services.PersonServiceImpl" >
+        <property name="personDAO" ref="personDAO" />
+    </bean>
+    
+    <bean id="helper" class="com.spcl.erp.helper.Helper" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+	
+	 
+	<bean id="customerDao" class="com.spcl.erp.dao.CustomerDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+   
+    <bean id="customerService" class="com.spcl.erp.services.CustomerServiceImpl" >
+        <property name="customerDao" ref="customerDao" />
+    </bean>
+	
+	<bean id="warehouseDao" class="com.spcl.erp.dao.WarehouseDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+	<bean id="warehouseService" class="com.spcl.erp.services.WarehouseServiceImpl" >
+        <property name="warehouseDao" ref="warehouseDao" />
+    </bean>
+	 <bean id="transferDao" class="com.spcl.erp.dao.TransferDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+	<bean id="transferService" class="com.spcl.erp.services.TransferServiceImpl" >
+        <property name="transferDao" ref="transferDao" />
+    </bean>
+   
+      <bean id="scrapDao" class="com.spcl.erp.dao.ScrapDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+	<bean id="scrapService" class="com.spcl.erp.services.ScrapServiceImpl" >
+        <property name="scrapDao" ref="scrapDao" />
+    </bean>
+          <bean id="DepartmentDao" class="com.spcl.erp.dao.DepartmentDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+   
+    <bean id="DepartmentService" class="com.spcl.erp.services.DepartmentServiceImpl" >
+        <property name="DepartmentDao" ref="DepartmentDao" />
+    </bean>
+    
+    <bean id="marketingDao" class="com.spcl.erp.dao.MarketingDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+   
+    <bean id="marketingService" class="com.spcl.erp.services.MarketingServiceImpl" >
+        <property name="marketingDao" ref="marketingDao" />
+    </bean>
+    
+    <bean id="employeeDao" class="com.spcl.erp.dao.EmployeeDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+   
+    <bean id="employeeService" class="com.spcl.erp.services.EmployeeServiceImpl" >
+        <property name="employeeDao" ref="employeeDao" />
+    </bean>
+    
+    <bean id="BankDao" class="com.spcl.erp.dao.BankDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+   
+    <bean id="bankService" class="com.spcl.erp.services.BankServiceImpl" >
+        <property name="BankDao" ref="BankDao" />
+    </bean>
+    
+    <bean id="salepersonDao" class="com.spcl.erp.dao.SalepersonDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+   
+    <bean id="salepersonService" class="com.spcl.erp.services.SalepersonServiceImpl" >
+        <property name="salepersonDao" ref="salepersonDao" />
+    </bean>
+    
+    <bean id="purchaseDao" class="com.spcl.erp.dao.PurchaseDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+   
+    <bean id="purchaseService" class="com.spcl.erp.services.PurchaseServiceImpl" >
+        <property name="purchaseDao" ref="purchaseDao" />
+    </bean>
+    
+	<bean id="labourDao" class="com.spcl.erp.dao.LabourDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+   
+    <bean id="labourService" class="com.spcl.erp.services.LabourServiceImpl" >
+        <property name="labourDao" ref="labourDao" />
+    </bean>
+	<bean id="fileuploadLabourService" class="com.spcl.erp.services.FileUploadLabourService" autowire="byType">
+    	<property name="labourDao" ref="labourDao" />
+    </bean>
+    <bean id="ExpensesDao" class="com.spcl.erp.dao.ExpensesDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+   
+    <bean id="expensesService" class="com.spcl.erp.services.ExpensesServiceImpl" >
+        <property name="ExpensesDao" ref="ExpensesDao" />
+    </bean>
+    
+    <bean id="hrrequirementDao" class="com.spcl.erp.dao.HrRequirementDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+   
+    <bean id="hrrequirementService" class="com.spcl.erp.services.HrRequirementServiceImpl" >
+        <property name="hrrequirementDao" ref="hrrequirementDao" />
+    </bean>
+     <bean id="exportLab" class="com.spcl.erp.services.ExportLabour" autowire="byType">
+    </bean>
+    
+     <bean id="exportcon" class="com.spcl.erp.services.ExportContractor" autowire="byType">
+    </bean>
+    
+ <bean id="ehsDao" class="com.spcl.erp.dao.EHSDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+   
+    <bean id="ehsService" class="com.spcl.erp.services.EHSServiceImpl" >
+        <property name="ehsDao" ref="ehsDao" />
+    </bean> 
+    
+     <bean id="exportHIRA" class="com.spcl.erp.services.ExportHira" autowire="byType">
+    </bean>
+    
+    <bean id="importHIRA" class="com.spcl.erp.services.ImportHira" autowire="byType">
+    	<property name="ehsDao" ref="ehsDao" />
+    </bean>
+     <bean id="visitorDao" class="com.spcl.erp.dao.VisitorDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+   
+    <bean id="visitorService" class="com.spcl.erp.services.VisitorServiceImpl" >
+        <property name="visitorDao" ref="visitorDao" />
+    </bean>
+     <bean id="productDao" class="com.spcl.erp.dao.ProductDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+   
+    <bean id="productService" class="com.spcl.erp.services.ProductServiceImpl" >
+        <property name="productDao" ref="productDao" />
+    </bean>
+  
+
+    <!--  <bean id="vmsDao" class="com.spcl.erp.dao.VMSDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+   
+    <bean id="vmsService" class="com.spcl.erp.services.VMSServiceImpl" >
+        <property name="vmsDao" ref="vmsDao" />
+    </bean>  -->
+    
+    
+</beans>   	 
+    
+    
+
+
+
+
+
+
+
+
+

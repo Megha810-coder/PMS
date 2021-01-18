@@ -1,0 +1,213 @@
+<!-- <div class="animated fadeIn">
+  <div class="row">
+      <div class="col-md-12 mb-8">
+      
+          <form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)">
+
+          <tabset>
+
+            <tab>
+              <ng-template tabHeading><i class="icon-list"></i> Row Material &nbsp;</ng-template>
+              <div class="card-body">
+                    <div class="form-group row">
+                      <label class="col-md-3 col-form-label" for="text-input"><b>Name Of Row Material</b> </label>
+                      <div class="col-md-6">
+                        <input type="text" id="product_name" name="product_name" class="form-control" placeholder="Plz Enter Mterial" ngModel>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="text-input"><b>Company Name </b></label>
+                        <div class="col-md-6">
+                          <input type="text" id="product_quantity" name="product_quantity" class="form-control" placeholder="Plz Enter Company Name" ngModel>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="text-input"><b>Manufacturing Date</b></label>
+                        <ejs-datepicker id='datepicker' placeholder='Select a Date'></ejs-datepicker>
+                        <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                          </div>
+                      </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="text-input"><b>Expiry Date</b></label>
+                        <ejs-datepicker id='datepicker' placeholder='Select a Date'></ejs-datepicker>
+                        <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                          </div>
+                      </div>
+
+                  
+                </div>
+            </tab>
+
+            <tab>
+              <ng-template tabHeading><i class="icon-calculator"></i>Process &nbsp;</ng-template>
+              
+              <div class="row">
+                  <div class="col-md-3">
+                    <label for="date"><b>Name Of Process</b></label>
+                  </div>
+                  <div class="col-md-3">
+                    <input type="text" id="sales_price" name="sales_price" class="form-control" placeholder="Plz Enter Process" ngModel>
+                  <br></div>
+
+                 <div class="col-md-3">
+                    <label for="date"> <b>Equipments Used</b> </label>
+                  </div>
+                   <div class="col-md-3">
+                      <input type="text" id="sales_price" name="sales_price" class="form-control" placeholder="Plz Enter Equipments" ngModel>
+                    <br></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                      <label for="date"><b>Crude Product</b> </label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" id="reference" name="reference" class="form-control" placeholder="Plz Enter Crude Product" ngModel>
+                      </div>
+  
+                   <div class="col-md-3">
+                      <label for="date"><b>Purification</b> </label>
+                    </div>
+                     <div class="col-md-3">
+                        <input type="text" id="cost" name="cost" class="form-control" placeholder="Plz Enter Purification" ngModel>
+                      <br></div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-3">
+                        <label for="date"><b>Quality control</b> </label>
+                      </div>
+                      <div class="col-md-3">
+                          <input type="text" id="barcode" name="barcode" class="form-control" placeholder="Plz Enter Quality control" ngModel>
+                        <br></div>
+                  </div>
+                  
+
+
+            </tab>
+
+            
+          
+          </tabset>
+          <input type="submit" value="submit">
+        </form>
+      
+       </div>
+       
+  </div>
+ 
+  </div>
+   -->
+
+   <head>
+      <style>
+        .card-header {
+          background-color: #BFC9CA;
+    
+        }
+      </style>
+    </head>
+    <div class="animated fadeIn">
+      <div class="row">
+          <!-- <div class>
+                           
+              <a [routerLink] = "'/neha/Product'"> <button type="button" class="btn btn-pill btn-block btn-primary">Back</button> </a>
+          </div> -->
+        <div class="col-md-12">
+              
+          <div class="card">
+            <div class="card-header">
+              <h3>Product Details</h3>
+            </div>
+            <div class="card-body">
+              <form (ngSubmit) = "onClickSubmit()">
+                <div class="form-group row">
+                  <label class="col-md-2 col-form-label" for="text-input"> Row Material:-</label>
+                  <div class="col-md-3">
+                    <!-- <input id="row_material" name="row_material" type="text" class=" form-control" [(ngModel)]="pro.row_material"> -->
+                  {{pro.row_material}}
+                  </div>
+                  
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-2 col-form-label" for="text-input"> Company Name:-</label>
+                  <div class="col-md-3">
+                    <!-- <input id="company_name" name="company_name" type="text" class=" form-control"  [(ngModel)]="pro.company_name"> -->
+                    {{pro.company_name}}
+                  </div>
+                  
+                </div>
+    
+                
+    
+                <div class="form-group row">
+                  <label class="col-md-2 col-form-label" for="date-input">Manufacturing Date:- </label>
+                  <div class="col-md-3">
+                    
+                    <!-- <input class="form-control" id="manufacturing_date" type="date" name="manufacturing_date" placeholder="date" [(ngModel)]="pro.manufacturing_date"> -->
+                    {{pro.manufacturing_date}}
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-2 col-form-label" for="date-input">Expiry Date:- </label>
+                  <div class="col-md-3">
+                    <!-- <input class="form-control" id="expiry_date" type="date" name="expiry_date" placeholder="date" [(ngModel)]="pro.expiry_date"> -->
+                    {{pro.expiry_date}}
+                  </div>
+                </div>
+              
+                <div class="form-group row">
+                  <label class="col-md-2 col-form-label" for="text-input"> Name Of Process:-</label>
+                  <div class="col-md-3">
+                    <!-- <input id="name_of_process" name="name_of_process" type="text" class=" form-control" [(ngModel)]="pro.name_of_process"> -->
+                    {{pro.name_of_process}}
+                  </div>
+                  
+                </div>
+                <!-- <div class="form-group row">
+                  <label class="col-md-2 col-form-label" for="text-input"> Equipments Used:-</label>
+                  <div class="col-md-3">
+                    {{pro.Equipment_used}}
+                  </div>
+                  
+                </div> -->
+                <div class="form-group row">
+                  <label class="col-md-2 col-form-label" for="text-input"> Crude Product:-</label>
+                  <div class="col-md-3">
+                    <!-- <input id="crude_product" name="crude_product" type="text" class=" form-control" [(ngModel)]="pro.crude_product"> -->
+                    {{pro.crude_product}}
+                  </div>
+                  
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-2 col-form-label" for="text-input"> Purification:-</label>
+                  <div class="col-md-3">
+                    <!-- <input id="purification" name="purification" type="text" class=" form-control" [(ngModel)]="pro.purification"> -->
+                    {{pro.purification}}
+                  </div>
+                  
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-2 col-form-label" for="text-input"> Quality control:-</label>
+                  <div class="col-md-3">
+                    <!-- <input id="quality" name="quality" type="text" class=" form-control"  [(ngModel)]="pro.quality"> -->
+                    {{pro.quality}}
+                  </div>
+                  
+                </div>
+             
+              
+          </form>
+        </div>
+          </div>
+    
+        </div>
+       
+      </div>
+     
+    </div>
+    
+    
+    

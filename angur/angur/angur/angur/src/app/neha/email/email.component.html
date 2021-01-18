@@ -1,0 +1,81 @@
+<html>
+    <body background="assets/img/avatars/emp2.jpeg">
+    <div class="bg" ></div>
+
+<hr>
+
+<div class="app-body">
+  <main class="main d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card mx-6">
+            <div class="card-body p-4 align-items-center">
+              <form #mailform="ngForm" (ngSubmit)="mail(mailform.value)">
+                <h2>Email</h2>
+               <hr>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-user"></i></span>
+                  </div>
+                  <input type="text" class="form-control" id="to" name="to" placeholder="To" ngModel>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">@</span>
+                  </div>
+                  <input type="text" class="form-control" name ="gmailuser" placeholder="From" ngModel>
+                </div>
+                <div class="input-group mb-3">
+                 
+                  <input type="password" class="form-control" name ="gmailpass" placeholder="Password" ngModel>
+                </div>
+                <div class="input-group mb-3">
+                 
+                  <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" ngModel>
+                </div>
+                <div class="input-group mb-4">
+                 
+                  <textarea type="text" class="form-control" name="message" placeholder="Message"  ngModel></textarea>
+                </div>
+                <div class="input-group mb-3">
+                        <input type="file" class="form-control" name="file" (change)="detectFiles($event)" ngModel >
+                </div>
+                <div class="card-footer">
+                  <input type="submit" value="submit" class="btn btn-info mr-1" data-toggle="modal" (click)="infoModal.show()">
+                  </div>	
+              </form>
+            </div>
+            <!-- <div class="card-footer p-4">
+              <div class="row">
+               
+                
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
+<!-- <div bsModal #infoModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-info" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Send</h4>
+        <button type="button" class="close" (click)="infoModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Your Mail Send successfully.&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="infoModal.hide()">Close</button>
+        <a [routerLink] = "'/leaves/Leave'">  <button type="button" class="btn btn-info">Okay</button></a>
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,13 @@
+package com.spcl.erp.dao;
+
+import java.util.List;
+
+import com.spcl.erp.model.Ehs_Action;
+
+public interface EHSDao {
+	
+	public boolean saveIncident(Ehs_Action action);
+	public List<Ehs_Action>getIncident_list();
+	public boolean updateIncident(Ehs_Action action);
+	public Ehs_Action getIncidentById(String action_id);
+}
